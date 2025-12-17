@@ -1,0 +1,30 @@
+stages:
+  - performance_test
+
+jmeter_performance_test:
+  stage: performance_test
+
+  # JMeter provided via Docker (no local install needed)
+  image: justb4/jmeter:5.6.3
+
+  variables:
+    PROJECT_PATH: "test_plans/PetStore_E2E_JMeter.jmx"
+    RESULTS_PATH: "reports/results.jtl"
+    REPORT_OUTPUT: "reports/html-report"
+
+  script:
+    - echo "Cleaning old reports..."
+    - rm -rf reports || true
+    - mkdir -p reports
+
+    - echo "Running JMeter test..."
+    - jmeter -n \
+        -t $PROJECT_PATH \
+        -l $RESULTS_PATH \
+        -e -o $REPORT_OUTPUT
+
+  artifacts:
+    when: always
+    paths:
+      - reports/
+    expire_in: 14 days
