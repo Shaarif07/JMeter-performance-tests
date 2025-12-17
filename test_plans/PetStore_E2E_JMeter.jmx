@@ -217,14 +217,13 @@
       </BackendListener>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group based on parameterization">
-        <intProp name="ThreadGroup.num_threads">100</intProp>
-        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <intProp name="ThreadGroup.num_threads">50</intProp>
+        <intProp name="ThreadGroup.ramp_time">2</intProp>
         <longProp name="ThreadGroup.duration">120</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">1</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
@@ -690,7 +689,7 @@
             </CSVDataSet>
             <hashTree/>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="04_ClickFish" enabled="false">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="04_ClickFish">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -789,7 +788,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="05_Click_on_Product" enabled="false">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="05_Click_on_Product">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -888,7 +887,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="06_ClickOnAddToCart" enabled="false">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="06_ClickOnAddToCart">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -981,7 +980,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="07_ClickOnProceedToCheckout" enabled="false">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="07_ClickOnProceedToCheckout">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -1067,7 +1066,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="08_EnterPaymentDetails&amp;ClickContinue" enabled="false">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="08_EnterPaymentDetails&amp;ClickContinue">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -1262,7 +1261,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="09_ClickOnConfirm" enabled="false">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="09_ClickOnConfirm">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
